@@ -45,7 +45,7 @@
 
             <li><a href="../navbar/"><%= current_user.email %></a></li>
             <li><%= link_to 'Logged In [click to logout]', destroy_user_session_path, :method => :delete %></li>
-            <% session.clear %>
+         
             <% else %>
            
             <% end %>
