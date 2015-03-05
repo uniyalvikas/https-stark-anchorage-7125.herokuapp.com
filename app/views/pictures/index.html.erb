@@ -1,12 +1,23 @@
 <h1>Listing pictures</h1>
 
-<table>
-  <thead>
+
+<h1 class="fancy">
+
+  <% @@xx= params[:title] %></h1>
+
+  <% if @@xx!= nil %>
+  <% session[:albumID] = @@xx %>
+  <% else %>
+  <% end %>
+
+
+ <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
     <tr>
       <th>Caption</th>
       <th>Description</th>
-      <th>User</th>
-      <th>Album</th>
+
       <th>Content type</th>
       <th>Width</th>
       <th>Height</th>
@@ -19,8 +30,6 @@
       <tr>
         <td><%= picture.caption %></td>
         <td><%= picture.description %></td>
-        <td><%= picture.user %></td>
-        <td><%= picture.album %></td>
         <td><%= picture.content_type %></td>
         <td><%= picture.width %></td>
         <td><%= picture.height %></td>
@@ -31,7 +40,7 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
 <%= link_to 'New Picture', new_picture_path %>

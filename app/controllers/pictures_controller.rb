@@ -4,9 +4,18 @@ class PicturesController < ApplicationController
   respond_to :html
 
   def index
-    @pictures = Picture.all
+
+    @albumID = session[:albumID]
+
+     
+    @pictures = Picture.where(:album_id => @albumID)
     respond_with(@pictures)
+
+
   end
+
+
+
 
   def show
     respond_with(@picture)

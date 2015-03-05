@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   resources :pictures
 
   resources :albums
-
-  devise_for :users
   root 'albums#index'
   get 'show/index'
+  devise_for :users
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.

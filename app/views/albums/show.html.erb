@@ -1,19 +1,7 @@
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Caption:</strong>
-  <%= @album.caption %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @album.description %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @album.user_id %>
-</p>
+<p class="alert alert-info">Album added </p>
 
 <%= link_to 'Edit', edit_album_path(@album) %> |
 <%= link_to 'Back', albums_path %>

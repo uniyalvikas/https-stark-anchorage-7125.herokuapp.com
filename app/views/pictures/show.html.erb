@@ -1,39 +1,8 @@
+
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Caption:</strong>
-  <%= @picture.caption %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @picture.description %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @picture.user %>
-</p>
-
-<p>
-  <strong>Album:</strong>
-  <%= @picture.album %>
-</p>
-
-<p>
-  <strong>Content type:</strong>
-  <%= @picture.content_type %>
-</p>
-
-<p>
-  <strong>Width:</strong>
-  <%= @picture.width %>
-</p>
-
-<p>
-  <strong>Height:</strong>
-  <%= @picture.height %>
-</p>
+<p class="alert alert-info">Picture added</p>
 
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'Back', pictures_path %>
