@@ -1,0 +1,34 @@
+
+ <h3>Current user id <%= current_user.id %></h3>
+ <p>Welcome <%= current_user.email %></p><p>user name <%= current_user.name %></p> 
+ <h1>Listing albums</h1>
+
+ <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+    <tr>
+      <th>Album Name</th>
+      <th>Description</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @albums.each do |album| %>
+      <tr>
+        <td><%= album.caption %></td>
+        <td><%= album.description %></td>
+      
+        <td><%= link_to 'Show', album %></td>
+        <td><%= link_to 'Edit', edit_album_path(album) %></td>
+        <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } ,:class => "label label-danger", :style => "color:white;" %></td>
+         <td><%= link_to 'Add Picture', :action => 'index', :controller => 'pictures' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Album', new_album_path, :class =>"label label-danger", :style=>"color:white;font-size:15px;" %>
